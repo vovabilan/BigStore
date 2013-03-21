@@ -30,3 +30,11 @@ Color.create(slug: "hot_pink")
 Color.create(slug: "lime")
 Color.create(slug: "green_yellow")
 Color.create(slug: "emerald")
+
+p "create size"
+
+
+p "create price_carrency"
+Price_carrency.create([{price: "USD"}, {price: "EUR"}, {price: "UAH"}, {price: "RUB"}])
+
+
