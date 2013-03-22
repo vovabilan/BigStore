@@ -25,4 +25,37 @@ ActiveRecord::Schema.define(:version => 20130320140138) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.integer  "parent_category_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  create_table "product_colors", :force => true do |t|
+    t.integer  "color_id"
+    t.integer  "product_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "product_images", :force => true do |t|
+    t.string   "image"
+    t.integer  "product_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+  
+  create_table "roles", :force => true do |t|
+    t.string   "role"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 end
